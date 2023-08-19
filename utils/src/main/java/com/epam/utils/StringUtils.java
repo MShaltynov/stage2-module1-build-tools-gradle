@@ -7,10 +7,10 @@ public class StringUtils {
     }
 
     public static boolean isPositiveNumber(String str) {
-        if (str.startsWith("0")&&str.length()>1) {
+        if (str == null) {
             return false;
         }
-        if (str == null) {
+        if (str.startsWith("0")&&str.length()>1) {
             return false;
         }
         try {
