@@ -6,9 +6,10 @@ import java.util.List;
 
 public class Utils {
     public static void main(String[] args) {
-        //List<String> strings = Arrays.asList("11.22", "2", "33", "87");
-        List<String> strings = new ArrayList<>();
-        strings.add(" ");
+        List<String> strings = Arrays.asList("11.22", "02", "33", "87");
+//        List<String> strings = new ArrayList<>();
+        //strings.add("0");
+//        strings.add(null);
         System.out.println(isAllPositiveNumbers(strings));
 
     }
@@ -18,6 +19,9 @@ public class Utils {
 
         for (String s : args) {
             if (s == null) {
+                return false;
+            }
+            if (s.startsWith("0") && s.length() > 1) {
                 return false;
             }
             try {
